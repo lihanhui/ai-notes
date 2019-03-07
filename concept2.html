@@ -38,7 +38,10 @@ implements some kind of lateral inhibition inspired by real neurons; see alexnet
 
 <br>
 <h2>spatial pyramid pooling</h2> 
-provide fixed-sized flattened vector to fully connected convolutional layer inspired by Bag of Words (BoW) to adapt not fixed-sized images,  normally fixed-sized images are feedded into CNN by resizing method such as crop, or warp.
+provide fixed-sized flattened vector to fully connected convolutional layer inspired by Bag of Words (BoW) to adapt not fixed-sized images,  normally fixed-sized images are fed into CNN by resizing method such as crop, or warp.
 
+<h2>batch normalization</h2>
+normalizing layers' input over mini-batch to solve problem of covariate shift (sample distribution difference between mini-batchs) and internal covariate shift (distribution difference between hiden layers's inputs) .<br>
+<a href="https://www.learnopencv.com/batch-normalization-in-deep-networks/">explaination</a><br>
 </body>
 </html>
