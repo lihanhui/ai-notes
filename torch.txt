@@ -1,0 +1,7 @@
+TH = TorcH
+THC = TorcH Cuda
+THCS = TorcH Cuda Sparse
+THCUNN = TorcH CUda Neural Network
+THD = TorcH Distributed
+THNN = TorcH Neural Network
+THS = TorcH Sparse
