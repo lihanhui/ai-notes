@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic concepts</title>
+</head>
+
+<body>
+    <h2>Entropy</h2>
+    <h3>self-information</h3>
+    <p>self-information即信息量：I(m) = log(1/p(m)) = -log(p(m))<br>
+    其中p(m)表示信息m在信息流中出现的概率。概率越低，信息量越大。
+    </p>
+    <h3>entropy</h3>
+    <p>The entropy of a discrete message space M is a measure of the amount of uncertainty one has about which message will be chosen.<br>
+    H(M) = E[I(M)] = sum(p(m)*I(m)) = -sum(p(m)*log(p(m))<br>
+    也可以叫做平均信息量。
+    </p>
+    <img src="images/entropy01.png"> </p>
+    <p>可以看到概率越低或者越大（不确定性低），熵越小。</p>
+    <h3>Joint entropy</h3>
+    <p>The joint entropy of two discrete random variables
+    X and Y
+    is defined as the entropy of the joint distribution of
+    X and Y:</p>
+    <p>H(X,Y) = Ex,y[-log(p(x,y))] = -SUMx,y(p(x,y) * log(p(x,y)))</p>
+    <h3>Conditional entropy (equivocation)</h3>
+    <p>Given a particular value of a random variable
+    Y, the conditional entropy of X given Y=y is defined as:</p>
+    <p>H(X|y) = EX|y[-log(p(x|y))] = - SUMx(p(x|y) * log(p(x|y)))</p>
+    <p>The conditional entropy of
+    X given
+    Y, also called the equivocation of
+    X about
+    Y is then given by:</p>  
+    <p>H(X|Y) = EY[H(X|y)] = -SUMy(p(y) * SUMx(p(x|y) * log(p(x|y)))) = -SUMx,y(p(y) * p(x|y) * log(p(x|y)) = -SUMx,y(p(x, y) * log(p(x,y)/p(y))) = SUMx,y(p(x, y) * log(p(y)/p(x,y))) = H(X, Y) + SUMx,y(p(x,y) * log(p(y)))) = H(X, Y) + SUMy(p(y)*log(p(y))) = H(X, Y) - H(y)</p>  
+    
+    <br>
+    
+    Reference: <a href="https://en.wikipedia.org/wiki/Quantities_of_information">https://en.wikipedia.org/wiki/Quantities_of_information</a>
+</body>
+
+</html>
