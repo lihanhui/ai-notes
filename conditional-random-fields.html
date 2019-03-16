@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic concepts</title>
+</head>
+
+<body>
+    <h2>Conditional Random Fields</h2>
+    <p>在给定一系列可以按时间排列的样本情况下，根据历史（未来）样本的标签判定当前样本的标签。即CRF发挥作用的地方。</p>
+    <h3>example - 词性标注问题</h3>
+    <p>“Bob (名词) drank(动词) coffee(名词) at(介词) Starbucks(名词)”</p>
+    <p>(名词，动词，名词，介词，名词)作为一个标注序列，称为l.也有其他可能的序列。如何选择最可靠的那个呢？</p>
+    
+    <h3>特征函数</h3>
+    <li>句子s</li>
+    <li>s中第i个词</li>
+    <li>l(i)第i个词要标注的词性</li>
+    <li>l(i-1)第i-1个词要标注的词性</li>
+    <h3>从特征函数到概率</h3>
+    <p>S(l|s) = score(l|s) = SUM(j=1,m)SUM(i=n)lamdaj * fj(i,s,l(i), l(i-1))</p>
+    <p>指数化+标准化</p>  
+    <p>p(l|s) = exp(S(l|s))/SUMm(exp(S(m|s)))</p> 
+    <br>
+    reference: 
+    <br><a href="https://www.jianshu.com/p/55755fc649b1">https://www.jianshu.com/p/55755fc649b1</a>
+    <br><a href="http://120.52.51.17/homepages.inf.ed.ac.uk/csutton/publications/crftut-fnt.pdf">http://120.52.51.17/homepages.inf.ed.ac.uk/csutton/publications/crftut-fnt.pdf</a>
+    <br><a href="http://blog.echen.me/2012/01/03/introduction-to-conditional-random-fields/">http://blog.echen.me/2012/01/03/introduction-to-conditional-random-fields/</a>
+</body>
+
+</html>
