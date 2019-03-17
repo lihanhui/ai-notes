@@ -35,7 +35,12 @@
     X about
     Y is then given by:</p>  
     <p>H(X|Y) = EY[H(X|y)] = -SUMy(p(y) * SUMx(p(x|y) * log(p(x|y)))) = -SUMx,y(p(y) * p(x|y) * log(p(x|y)) = -SUMx,y(p(x, y) * log(p(x,y)/p(y))) = SUMx,y(p(x, y) * log(p(y)/p(x,y))) = H(X, Y) + SUMx,y(p(x,y) * log(p(y)))) = H(X, Y) + SUMy(p(y)*log(p(y))) = H(X, Y) - H(y)</p>  
-    
+    <h3>Kullback–Leibler divergence</h3>
+    <p>The Kullback–Leibler divergence (or information divergence, information gain, or relative entropy) is a way of comparing
+    two distributions, a "true" probability distribution p, and an arbitrary probability distribution q.</p>    
+    Dkl(p(X)||q(X)) = SUMx(p(x)*log(p(x)/q(x))) = -H(X) - SUMx(p(x) * log(q(x)))
+    <h3>Cross entropy</h3>
+    H(p, q) = Ep[-log(q)] = -SUMx(p(x)*log(q(x))) = H(X) + Dkl(p(X)||q(X))
     <br>
     
     Reference: <br>
