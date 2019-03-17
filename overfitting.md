@@ -17,7 +17,7 @@
     <li>Ensembling</li>
     
     <h3>Regularization</h3>
-    
+    <img src="images/regularization.png">
 
     Reference: <br>
     <a
