@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic concepts</title>
+</head>
+
+<body>
+    <h2>Overfitting</h2>
+    <h3>How to Prevent Overfitting</h3>
+    <li>Cross-validation</li>
+    <li>Train with more data</li>
+    <li>Remove features</li>
+    <li>Early stopping</li>
+    <li>Regularization</li>
+    <li>Ensembling</li>
+    
+    <h3>Regularization</h3>
+    <img src="images/regularization.png">
+    <p>The equation shown above is called Ridge Regression (L2) - the beta coefficients are squared and summed. However, another regularization method is Lasso Regreesion (L1), which sums the absolute value of the beta coefficients. Even more, you can combine Ridge and Lasso linearly to get Elastic Net Regression (both squared and absolute value components are included in the cost function).
+
+L2 regularization tends to yield a “dense” solution, where the magnitude of the coefficients are evenly reduced. For example, for a model with 3 parameters, B1, B2, and B3 will reduce by a similar factor.
+
+However, with L1 regularization, the shrinkage of the parameters may be uneven, driving the value of some coefficients to 0. In other words, it will produce a sparse solution. Because of this property, it is often used for feature selection- it can help identify the most predictive features, while zeroing the others.</p>
+    Reference: <br>
+    <a href="https://dshincd.github.io/blog/regularization/">https://dshincd.github.io/blog/regularization/</a>
+    <a
+        href="https://en.wikipedia.org/wiki/Quantities_of_information">https://en.wikipedia.org/wiki/Quantities_of_information</a>
+</body>
+
+</html>
