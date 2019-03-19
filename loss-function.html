@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic concepts</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=default"">
+    </script>
+</head>
+
+<body>
+    <h2>loss function</h2>
+    $$J(\theta)=\frac{1}{2m}\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})^2$$ 
+    <h3>Hinge loss</h3>
+    $$l(y^{(i)}, h_\theta(x^{(i)})) = max(0, y^{(i)}*h_\theta(x^{(i)}))$$ <br>
+    <img src="images/hinge-loss.png"> <br>
+    <p>the more you violate the margin, the higher the penalty is. -- works well for its purposes in SVM as a classfier</p>
+
+    
+    <h3>square loss</h3>
+    $$l(y^{(i)}, h_\theta(x^{(i)})) = (y^{(i)} - h_\theta(x^{(i)}))^2$$<br>
+    <img src="images/square-loss.png"><br>
+
+    <h3>Absolute loss</h3>
+    $$l(y^{(i)}, h_\theta(x^{(i)})) = |y^{(i)} - h_\theta(x^{(i)})|$$<br>
+    <img src="images/absolute-loss.png"><br>
+    Reference: <br>
+    <a href="http://courses.cms.caltech.edu/cs253/slides/cs253-14-GPs.pdf">http://courses.cms.caltech.edu/cs253/slides/cs253-14-GPs.pdf</a><br>
+</body>
+
+</html>
