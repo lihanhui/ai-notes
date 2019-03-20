@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Basic concepts</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=default">
+    </script>
 </head>
 
 <body>
@@ -19,9 +21,9 @@
     <li>l(i)第i个词要标注的词性</li>
     <li>l(i-1)第i-1个词要标注的词性</li>
     <h3>从特征函数到概率</h3>
-    <p>S(l|s) = score(l|s) = SUM(j=1,m)SUM(i=n)lamdaj * fj(i,s,l(i), l(i-1))</p>
+    <p>$$S(l|s) = score(l|s) = \sum_{j=1}^m\sum_{i=1}^n\lambda_j * f_j(i,s,l(i), l(i-1))$$</p>
     <p>指数化+标准化</p>  
-    <p>p(l|s) = exp(S(l|s))/SUMm(exp(S(m|s)))</p> 
+    <p>$$p(l|s) = \frac{exp(S(l|s))}{\sum_{m}(exp(S(m|s)))}$$</p> 
     <br>
     reference: 
     <br><a href="https://www.jianshu.com/p/55755fc649b1">https://www.jianshu.com/p/55755fc649b1</a>
